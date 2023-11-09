@@ -28,7 +28,7 @@ const todoSchema = new mongoose.Schema({
     },
     
 }, {
-    collation: "todos",
+    collection: "todos",
     timestamps: true,
 }
 );

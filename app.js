@@ -6,9 +6,9 @@ const PORT = process.env.PORT || 8000;
 
 app.use(express.json())
 
-app.all("/", (req, res) => {
-    res.send("Hello World");
-    });
+// app.all("/", (req, res) => {
+//     res.send("Hello World");
+//     });
 app.use(require("./src/routes/todo"))
 
 require("./src/dbConnection"); // veritabanı bağlantısı için yazdığımız kodu kullanıyoruz. 
