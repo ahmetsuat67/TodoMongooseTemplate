@@ -30,7 +30,7 @@ module.exports.Todo = {
     },
 
     read: async (req, res) => {
-        
+
         const data = await Todo.findById(req.params.id);
         res.status(200).send({
             error: false,
@@ -42,7 +42,7 @@ module.exports.Todo = {
 
     update: async (req, res) => {
 
-        const data = await Todo.updateOne({_id: req.params.id}, req.body)
+        const data = await Todo.updateOne({ _id: req.params.id }, req.body)
         res.status(202).send({
             error: false,
             body: req.body,
@@ -54,7 +54,7 @@ module.exports.Todo = {
     },
 
     delete: async (req, res) => {
-        const data = await Todo.deleteOne({_id: req.params.id});
+        const data = await Todo.deleteOne({ _id: req.params.id });
         res.sendStatus((data.deletedCount >= 1) ? 204 : 404)
 
     }
